@@ -342,7 +342,7 @@ This enables:
 * `/api` → Spring Boot backend
 
 ---
-###🔁 Port Forwarding (CRITICAL in Codespaces)
+🔁 Port Forwarding (CRITICAL in Codespaces)
 ```
 Why port-forward is required
 
