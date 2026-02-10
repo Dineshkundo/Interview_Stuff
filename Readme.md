@@ -407,6 +407,5 @@ It’s a **hands-on demonstration of real Kubernetes engineering**.
 
 ⭐ If you like this project, feel free to star the repo and connect on LinkedIn!
 
-```
 
 
