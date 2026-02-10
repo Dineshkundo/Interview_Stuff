@@ -342,7 +342,35 @@ This enables:
 * `/api` → Spring Boot backend
 
 ---
+###🔁 Port Forwarding (CRITICAL in Codespaces)
+```
+Why port-forward is required
 
+GitHub Codespaces has no cloud LoadBalancer
+
+LoadBalancer services stay in EXTERNAL-IP: <pending>
+
+/etc/hosts only handles DNS, not network exposure
+
+So Ingress must be accessed via port-forwarding.
+
+Port-forward Ingress Controller
+
+
+Run this in a separate terminal and keep it running:
+```
+```
+kubectl port-forward \
+  -n ingress-nginx \
+  svc/ingress-nginx-controller \
+  8080:80
+```
+
+```
+This maps:
+
+localhost:8080 → Ingress Controller → Internal Services
+```
 ### 6️⃣ Access Application (GitHub Codespaces)
 
 In Codespaces, the Ingress is accessed via the forwarded URL:
